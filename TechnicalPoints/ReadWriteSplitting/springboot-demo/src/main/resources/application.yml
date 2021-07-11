@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: spring-boot-demo
+  datasource:
+    druid:
+      stat-view-servlet:
+        enabled: true
+        login-username: druid
+        login-password: druid
+mysql:
+  datasource:
+    master:
+      url: jdbc:mysql://192.168.33.51:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true
+      username: root
+      password: master123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    slave1:
+      url: jdbc:mysql://192.168.33.52:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true
+      username: root
+      password: slave123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    slave2:
+      url: jdbc:mysql://192.168.33.53:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true
+      username: root
+      password: slave123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8091
+
+logging:
+  level:
+    cn.leithda.dao: debug
