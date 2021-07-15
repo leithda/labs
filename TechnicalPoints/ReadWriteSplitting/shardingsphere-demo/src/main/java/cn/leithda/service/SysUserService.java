@@ -13,17 +13,49 @@ import java.util.List;
 public interface SysUserService {
 
     /**
-     * 使用主库通过ID查询单条数据
+     * 使用通过ID查询单个用户
      *
      * @param userId 主键
-     * @return 实例对象
      */
     SysUser queryById(Long userId);
 
 
     /**
-     * 查询所有用户信息，select*，使用从库
+     * 查询所有用户信息
      */
     List<SysUser> selectAll();
 
+    /**
+     * 新增用户
+     */
+    int save();
+
+    /**
+     * 修改用户
+     */
+    int update();
+
+    /**
+     * 删除用户
+     *
+     * @param userId 主键
+     */
+    int delete(Long userId);
+
+    /**
+     * 新增后查询
+     */
+    List<SysUser> selectAfterInsert();
+
+    /**
+     * 更新后查询
+     */
+    List<SysUser> selectAfterUpdate();
+
+    /**
+     * 删除后查询
+     *
+     * @param userId 主键
+     */
+    List<SysUser> selectAfterDelete(Long userId);
 }

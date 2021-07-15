@@ -29,5 +29,26 @@ public interface SysUserDao {
      */
     List<SysUser> selectAll(SysUser sysUser);
 
+    /**
+     * 新增数据
+     *
+     * @param sysUser 实例对象
+     * @return 影响行数
+     */
+    int insert(SysUser sysUser);
+
+    /**
+     * 修改数据
+     *
+     * @param sysUser 实例对象
+     * @return 影响行数
+     */
+    int update(SysUser sysUser);
+
+    /**
+     * 删除数据
+     * @param userId 主键
+     */
+    int delete(Long userId);
 }
 
